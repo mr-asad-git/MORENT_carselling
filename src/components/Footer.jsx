@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
 
-    const aboutData = ["How it works", "Featured", "Partnership", "Bussiness Relation"]
+    const aboutData = ["How it works", "Featured", "Partnership", "Business Relation"]
     const communityData = ["Events", "Blog", "Podcast", "Invite a friend"]
     const socialsData = ["Discord", "Instagram", "Twitter", "Youtube"]
 

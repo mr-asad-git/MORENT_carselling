@@ -3,7 +3,7 @@ import HeroCard from '../components/HeroCard'
 import Locators from '../components/Locators'
 import LocateDivider from '../components/LocateDivider'
 import CarCard from '../components/CarCard'
-import cars from '../data/cars'
+import cars from '../mui/cars'
 
 const LayoutPage = ({ wishlist, setWishlist, searchTerm }) => {
 
@@ -43,9 +43,9 @@ const LayoutPage = ({ wishlist, setWishlist, searchTerm }) => {
       </div>
 
       <div className="location-comp flex justify-between items-center flex-row gap-[2rem]">
-        <Locators />
+        <Locators title="Pick-up" />
         <LocateDivider />
-        <Locators />
+        <Locators title="Drop-off" />
       </div>
 
       <div className="section-popular flex flex-col gap-[20px]">

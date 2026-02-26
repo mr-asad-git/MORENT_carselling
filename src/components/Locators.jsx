@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Locators = () => {
+const Locators = ({ title }) => {
     return (
         <div className='flex w-[680px] h-[120px] bg-[#fff] shadow-md rounded-xl justify-center items-center px-[50px] py-[25px]'>
             <div className="locate-div w-full h-full">
@@ -9,7 +9,7 @@ const Locators = () => {
                         <div className="radio1 w-[18px] h-[18px] rounded-full bg-white border border-(--global-color) flex justify-center items-center">
                             <div className="radio w-[10px] h-[10px] rounded-full bg-(--global-color)"></div>
                         </div>
-                        <p className='text-[Plus_Jakarta_Sans] font-[600] text-[16px] leading-tight'>Pick-up</p>
+                        <p className='text-[Plus_Jakarta_Sans] font-[600] text-[16px] leading-tight'>{title}</p>
                     </div>
                     <div className="dropdowns flex justify-between items-center w-full">
                         <div className="Locations-dropdown flex flex-col gap-[5px] flex-1">

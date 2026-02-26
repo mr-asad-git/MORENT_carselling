@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Search = ({ searchTerm, onSearchChange }) => {
+const Search = ({ searchTerm, onSearchChange, setIsSidebarOpen }) => {
     return (
         <div>
             <div className='Search'>
@@ -16,7 +16,7 @@ const Search = ({ searchTerm, onSearchChange }) => {
                         />
                     </div>
                     <div className="filter">
-                        <img src="./filter.svg" className='w-[25px] h-[25px]' alt="" srcset="" />
+                        <img src="./filter.svg" className='w-[25px] h-[25px]' alt="" srcset="" onClick={() => setIsSidebarOpen(true)} />
                     </div>
                 </div>
             </div>
