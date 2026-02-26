@@ -1,0 +1,21 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import CarCard from '../components/CarCard'
+
+const Wishlist = ({ wishlist, setWishlist }) => {
+    return (
+        <div className='mx-[5rem] flex flex-col gap-[2rem]'>
+            <div className="wrap flex flex-col">
+                <p className='text-[Plus_Jakarta_Sans] font-[600] text-[16px] text-[#90A3BF] leading-tight px-[10px]'><Link to="/">Home</Link> / &nbsp;<span className='text-(--global-color)'>Wishlist</span></p>
+            </div>
+
+            <div className="cars-grid grid grid-cols-4 gap-[32px]">
+                {wishlist.map((car) => (
+                    <CarCard key={car.id} car={car} wishlist={wishlist} setWishlist={setWishlist} />
+                ))}
+            </div>
+        </div>
+    )
+}
+
+export default Wishlist
