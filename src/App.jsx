@@ -10,6 +10,7 @@ const App = () => {
   const [wishlist, setWishlist] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
+
   return (
     <>
       <Header wishlist={wishlist} setWishlist={setWishlist} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />

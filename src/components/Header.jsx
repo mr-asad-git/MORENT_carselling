@@ -16,7 +16,7 @@ const Header = ({ searchTerm, setSearchTerm, wishlist, setWishlist }) => {
             <div className="wrapper w-full px-20 flex justify-between items-center">
                 <div className="logo_and_text w-[50%] flex justify-between items-center flex-row gap-[">
                     <div className='Logo_Text'>
-                        <p className='text-[33px] leading-[23px] tracking-[0.02em] text-[Plus_Jakarta_Sans] text-(--global-color) font-bold'><Link to="/">MORENT</Link></p>
+                        <p className='text-[15px] text-[33px] leading-[23px] tracking-[0.02em] text-[Plus_Jakarta_Sans] text-(--global-color) font-bold'><Link to="/">MORENT</Link></p>
                     </div>
                     <Search searchTerm={localSearchTerm} onSearchChange={setLocalSearchTerm} />
                 </div>

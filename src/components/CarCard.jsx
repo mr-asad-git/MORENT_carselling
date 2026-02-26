@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const CarCard = ({ car, wishlist, setWishlist }) => {
 
-    const [favourite, setFavourite] = useState(false);
+    const favourite = wishlist.some((item) => item.id === car.id);
 
     const handleFavourite = () => {
-        setFavourite(!favourite);
         if (favourite) {
             setWishlist(wishlist.filter((item) => item.id !== car.id));
         } else {
@@ -19,7 +18,7 @@ const CarCard = ({ car, wishlist, setWishlist }) => {
                     <p className='text-[Plus_Jakarta_Sans] font-[700] text-[20px] leading-tight text-[#1A202C]'>{car.name}</p>
                     <p className='text-[Plus_Jakarta_Sans] font-[500] text-[14px] leading-tight text-[#90A3BF] mt-[4px]'>{car.type}</p>
                 </div>
-                <img src={favourite ? "/filled-heart.svg" : "/empty-heart.svg"} className="w-[24px] h-[24px] cursor-pointer" alt="Like" onClick={handleFavourite} />
+                <img src={favourite ? "/filled-heart.svg" : "/empty-heart.svg"} className="w-[24px] h-[24px] cursor-pointer" alt="Like" onClick={() => handleFavourite(car)} />
             </div>
 
             <div className="relative w-full h-[120px] flex items-center justify-center my-[20px]">
@@ -33,11 +32,11 @@ const CarCard = ({ car, wishlist, setWishlist }) => {
                         <img className='w-[24px] h-[24px] object-contain' src="/gas.svg" alt="Gas" />
                         <p className='text-[Plus_Jakarta_Sans] font-[500] text-[14px] leading-tight text-[#90A3BF]'>{car.fuelCapacity}L</p>
                     </div>
-                    <div className="transmission flex items-center gap-[6px]">
+                    <div className="transmission flex border-l border-(--theme-color)/60 pl-2 items-center gap-[6px]">
                         <img className='w-[24px] h-[24px] object-contain' src="/Car.svg" alt="Transmission" />
                         <p className='text-[Plus_Jakarta_Sans] font-[500] text-[14px] leading-tight text-[#90A3BF]'>{car.transmission}</p>
                     </div>
-                    <div className="passengers flex items-center gap-[6px]">
+                    <div className="passengers flex border-l border-(--theme-color)/60 pl-2 items-center gap-[6px]">
                         <img className='w-[24px] h-[24px] object-contain' src="/passengers.svg" alt="Passengers" />
                         <p className='text-[Plus_Jakarta_Sans] font-[500] text-[14px] leading-tight text-[#90A3BF]'>{car.passengers} People</p>
                     </div>
