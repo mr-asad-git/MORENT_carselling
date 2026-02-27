@@ -16,16 +16,16 @@ const App = () => {
   const [wishlist, setWishlist] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
+  const [showSearch, setShowSearch] = useState(false);
 
   return (
     <>
-      <Header wishlist={wishlist} setWishlist={setWishlist} searchTerm={searchTerm} setSearchTerm={setSearchTerm} setIsSidebarOpen={setIsSidebarOpen} />
+      <Header wishlist={wishlist} setWishlist={setWishlist} searchTerm={searchTerm} setSearchTerm={setSearchTerm} setIsSidebarOpen={setIsSidebarOpen} showSearch={showSearch} setShowSearch={setShowSearch} />
 
       <Routes>
-        <Route path="/" element={<LayoutPage wishlist={wishlist} setWishlist={setWishlist} searchTerm={searchTerm} />} />
-        <Route path="/wishlist" element={<Wishlist wishlist={wishlist} setWishlist={setWishlist} searchTerm={searchTerm} />} />
-        <Route path="/settings" element={<Settings />} />
+        <Route path="/" element={<LayoutPage wishlist={wishlist} setWishlist={setWishlist} searchTerm={searchTerm} setShowSearch={setShowSearch} />} />
+        <Route path="/wishlist" element={<Wishlist wishlist={wishlist} setWishlist={setWishlist} searchTerm={searchTerm} setShowSearch={setShowSearch} />} />
+        <Route path="/settings" element={<Settings setShowSearch={setShowSearch} />} />
       </Routes>
       <Footer />
     </>

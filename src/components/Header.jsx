@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Search from './Search';
 import { useDebounce } from 'react-use';
 
-const Header = ({ searchTerm, setSearchTerm, wishlist, setIsSidebarOpen }) => {
+const Header = ({ searchTerm, setSearchTerm, wishlist, setIsSidebarOpen, showSearch }) => {
     const [localSearchTerm, setLocalSearchTerm] = useState(searchTerm);
 
     useDebounce(() => {
@@ -18,7 +18,7 @@ const Header = ({ searchTerm, setSearchTerm, wishlist, setIsSidebarOpen }) => {
                     <div className='Logo_Text'>
                         <p className='text-[15px] text-[33px] leading-[23px] tracking-[0.02em] text-[Plus_Jakarta_Sans] text-(--global-color) font-bold'><Link to="/">MORENT</Link></p>
                     </div>
-                    <Search searchTerm={localSearchTerm} onSearchChange={setLocalSearchTerm} setIsSidebarOpen={setIsSidebarOpen} />
+                    {showSearch && <Search searchTerm={localSearchTerm} onSearchChange={setLocalSearchTerm} setIsSidebarOpen={setIsSidebarOpen} />}
                 </div>
 
                 <div className="nav-links_and_user flex justify-center items-center">

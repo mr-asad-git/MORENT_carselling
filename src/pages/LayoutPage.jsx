@@ -1,11 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import HeroCard from '../components/HeroCard'
 import Locators from '../components/Locators'
 import LocateDivider from '../components/LocateDivider'
 import CarCard from '../components/CarCard'
 import cars from '../mui/cars'
 
-const LayoutPage = ({ wishlist, setWishlist, searchTerm }) => {
+const LayoutPage = ({ wishlist, setWishlist, searchTerm, setShowSearch }) => {
+
+  useEffect(() => {
+    setShowSearch(true);
+  }, [setShowSearch]);
 
 
   const filteredCars = searchTerm.trim()
