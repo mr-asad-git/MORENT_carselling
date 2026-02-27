@@ -15,7 +15,7 @@ const Search = ({ searchTerm, onSearchChange, setIsSidebarOpen }) => {
                             placeholder='What are you looking for?'
                         />
                     </div>
-                    <div className="filter">
+                    <div className="filter cursor-pointer">
                         <img src="./filter.svg" className='w-[25px] h-[25px]' alt="" srcset="" onClick={() => setIsSidebarOpen(true)} />
                     </div>
                 </div>

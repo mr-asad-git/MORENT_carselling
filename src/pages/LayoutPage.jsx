@@ -4,6 +4,9 @@ import Locators from '../components/Locators'
 import LocateDivider from '../components/LocateDivider'
 import CarCard from '../components/CarCard'
 import cars from '../mui/cars'
+import { Button } from "@/components/ui/button"
+import { toast } from "sonner"
+
 
 const LayoutPage = ({ wishlist, setWishlist, searchTerm, setShowSearch, filters, isSidebarOpen }) => {
 
@@ -102,9 +105,17 @@ const LayoutPage = ({ wishlist, setWishlist, searchTerm, setShowSearch, filters,
         )}
 
         <div className="flex justify-center mt-[40px]">
-          <button className='px-[20px] h-[44px] bg-[#3563E9] rounded-[4px] text-white text-[Plus_Jakarta_Sans] font-[600] text-[16px] leading-tight hover:bg-[#3563E9]/80 transition-all cursor-pointer border-none'>
-            Show more car &nbsp; (120)
-          </button>
+          <Button
+            variant="outline"
+            onClick={() => toast("No more cars available", {
+              id: "show-more-toast",
+              duration: 4000,
+              position: "bottom-right"
+            })}
+            className='px-[20px] h-[44px] bg-[#3563E9] rounded-[4px] hover:bg-[#3563E9]/80 transition-all cursor-pointer border-none'
+          >
+            <span className='text-white text-[Plus_Jakarta_Sans] font-[600] text-[16px] leading-tight'>Show more car &nbsp; (120)</span>
+          </Button>
         </div>
       </div>
     </div>

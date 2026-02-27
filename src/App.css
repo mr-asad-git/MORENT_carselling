@@ -53,3 +53,28 @@ body {
     background-size: 40px 40px;
     background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
 }
+/* Sonner progress bar styles */
+@keyframes sonner-progress {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+[data-sonner-toast] {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+[data-sonner-toast]::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: #3563E9;
+  z-index: 10;
+  animation: sonner-progress 4000ms linear forwards;
+}
+
+[data-sonner-toast][data-expanded='true']::after {
+  display: none;
+}

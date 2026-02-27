@@ -54,7 +54,8 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, filters, setFilters }) => {
             {/* Overlay */}
             {isSidebarOpen && (
                 <div
-                    className="fixed inset-0 bg-black/20 z-40 lg:hidden"
+                    className="fixed left-0 right-0 bottom-0 bg-black/20 z-40"
+                    style={{ top: '18vh' }}
                     onClick={() => setIsSidebarOpen(false)}
                 />
             )}
@@ -62,14 +63,26 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, filters, setFilters }) => {
             {/* Sidebar Panel */}
             <aside
                 className={`
-          fixed top-0 left-0 h-full z-50
-          w-[280px] bg-white border-r border-[#E1E5EA]
+          fixed left-0 z-50
+          w-[250px] bg-white border-r border-[#E1E5EA]
           flex flex-col
           transition-transform duration-300 ease-in-out
           ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
         `}
-                style={{ paddingTop: '18vh' }}
+                style={{ top: '18vh', height: 'calc(100% - 18vh)' }}
             >
+                {/* Sidebar header row */}
+                <div className="flex justify-between items-center px-6 py-4 border-b border-[#E1E5EA]">
+                    <p className="text-[16px] font-[700] text-[#1A202C]">Filters</p>
+                    <button
+                        onClick={() => setIsSidebarOpen(false)}
+                        className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors cursor-pointer border-none bg-transparent text-[#90A3BF] hover:text-[#1A202C] text-[20px] leading-none"
+                        aria-label="Close filters"
+                    >
+                        ✕
+                    </button>
+                </div>
+
                 {/* Scrollable content */}
                 <div className="flex-1 overflow-y-auto px-6 py-6 flex flex-col gap-8">
 

@@ -11,6 +11,7 @@ import Wishlist from './pages/Wishlist';
 import Settings from './pages/Settings';
 
 import { Routes, Route } from 'react-router-dom';
+import { Toaster } from "@/components/ui/sonner"
 
 const DEFAULT_FILTERS = {
   types: [],
@@ -82,6 +83,7 @@ const App = () => {
         </Routes>
         <Footer />
       </div>
+      <Toaster />
     </>
   )
 }
