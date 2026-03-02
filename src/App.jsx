@@ -10,6 +10,7 @@ import LayoutPage from './pages/LayoutPage';
 import Wishlist from './pages/Wishlist';
 import Settings from './pages/Settings';
 import CarDisplay from './pages/CarDisplay';
+import Cars from './pages/Cars';
 
 import { Routes, Route } from 'react-router-dom';
 import { Toaster } from "@/components/ui/sonner"
@@ -82,6 +83,8 @@ const App = () => {
             element={<Settings setShowSearch={setShowSearch} />}
           />
           <Route path="/car-display/:id" element={<CarDisplay wishlist={wishlist} setWishlist={setWishlist} />} />
+
+          <Route path="/cars" element={<Cars wishlist={wishlist} setWishlist={setWishlist} searchTerm={searchTerm} setShowSearch={setShowSearch} filters={filters} isSidebarOpen={isSidebarOpen} />} />
         </Routes>
         <Footer />
       </div>

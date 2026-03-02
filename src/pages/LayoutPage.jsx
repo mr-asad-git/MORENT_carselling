@@ -6,6 +6,7 @@ import CarCard from '../components/CarCard'
 import cars from '../mui/cars'
 import { Button } from "@/components/ui/button"
 import { toast } from "sonner"
+import { Link } from 'react-router-dom'
 
 
 const LayoutPage = ({ wishlist, setWishlist, searchTerm, setShowSearch, filters, isSidebarOpen }) => {
@@ -75,7 +76,7 @@ const LayoutPage = ({ wishlist, setWishlist, searchTerm, setShowSearch, filters,
       <div className="section-popular flex flex-col gap-[20px]">
         <div className="flex justify-between items-center px-[10px]">
           <p className='text-[Plus_Jakarta_Sans] font-[600] text-[16px] text-[#90A3BF] leading-tight'>Popular Car</p>
-          <a href="#" className='text-[Plus_Jakarta_Sans] font-[600] text-[16px] text-[#3563E9] leading-tight hover:underline hover:transition-all hover:duration-300'>View All</a>
+          <Link to="/cars" className='text-[Plus_Jakarta_Sans] font-[600] text-[16px] text-[#3563E9] leading-tight hover:underline hover:transition-all hover:duration-300'>View All</Link>
         </div>
         {popularCars.length > 0 ? (
           <div className={`cars-grid grid gap-[32px] ${isSidebarOpen ? 'grid-cols-3' : 'grid-cols-4'}`}>
