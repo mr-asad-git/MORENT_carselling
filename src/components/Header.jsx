@@ -79,8 +79,8 @@ const Header = ({ searchTerm, setSearchTerm, wishlist, setIsSidebarOpen, showSea
                         </div>
                     </Link>
 
-                    <div className="w-[44px] h-[44px] sm:w-[45px] sm:h-[45px] border border-gray-200 rounded-full bg-(--primary-color) overflow-hidden">
-                        <img src="/Image.svg" className='w-full h-full' alt="Profile" />
+                    <div className="w-[44px] h-[44px] sm:w-[45px] sm:h-[45px] border border-gray-200 rounded-full bg-(--primary-color) overflow-hidden ">
+                        <img src="/Image.png" className='w-full h-full' alt="Profile" />
                     </div>
 
                 </div>
