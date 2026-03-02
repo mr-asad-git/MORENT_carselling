@@ -17,24 +17,24 @@ const Footer = () => {
                     <div className="about px-10">
                         <ul className='flex flex-col gap-[1rem]'>
                             <li className='text-[Plus_Jakarta_Sans] font-[600] text-[20px] leading-tight'>About</li>
-                            {aboutData.map((about) => (
-                                <li className='text-[Plus_Jakarta_Sans] font-[400] text-[15px] leading-tight hover:text-(--global-color) transition-all cursor-pointer'>{about}</li>
+                            {aboutData.map((about, index) => (
+                                <li key={index} className='text-[Plus_Jakarta_Sans] font-[400] text-[15px] leading-tight hover:text-(--global-color) transition-all cursor-pointer'>{about}</li>
                             ))}
                         </ul>
                     </div>
                     <div className="Community px-10">
                         <ul className='flex flex-col gap-[1rem]'>
                             <li className='text-[Plus_Jakarta_Sans] font-[600] text-[20px] leading-tight'>Community</li>
-                            {communityData.map((community) => (
-                                <li className='text-[Plus_Jakarta_Sans] font-[400] text-[15px] leading-tight hover:text-(--global-color) transition-all cursor-pointer'>{community}</li>
+                            {communityData.map((community, index) => (
+                                <li key={index} className='text-[Plus_Jakarta_Sans] font-[400] text-[15px] leading-tight hover:text-(--global-color) transition-all cursor-pointer'>{community}</li>
                             ))}
                         </ul>
                     </div>
                     <div className="Socials px-10">
                         <ul className='flex flex-col gap-[1rem]'>
                             <li className='text-[Plus_Jakarta_Sans] font-[600] text-[20px] leading-tight'>Socials</li>
-                            {socialsData.map((social) => (
-                                <li className='text-[Plus_Jakarta_Sans] font-[400] text-[15px] leading-tight hover:text-(--global-color) transition-all cursor-pointer'>{social}</li>
+                            {socialsData.map((social, index) => (
+                                <li key={index} className='text-[Plus_Jakarta_Sans] font-[400] text-[15px] leading-tight hover:text-(--global-color) transition-all cursor-pointer'>{social}</li>
                             ))}
                         </ul>
                     </div>

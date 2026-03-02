@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const CarCard = ({ car, wishlist, setWishlist }) => {
 
@@ -47,9 +48,9 @@ const CarCard = ({ car, wishlist, setWishlist }) => {
                         <span className='text-[Plus_Jakarta_Sans] font-[700] text-[20px] leading-tight text-[#1A202C]'>${car.price}.00/</span>
                         <span className='text-[Plus_Jakarta_Sans] font-[500] text-[14px] leading-tight text-[#90A3BF]'>day</span>
                     </div>
-                    <button className='px-[20px] h-[44px] bg-[#3563E9] rounded-[4px] text-white text-[Plus_Jakarta_Sans] font-[600] text-[16px] leading-tight hover:bg-[#3563E9]/80 transition-all cursor-pointer border-none'>
+                    <Link to={`/car-display/${car.id}`} className='px-[20px] h-[44px] bg-[#3563E9] rounded-[4px] flex justify-center items-center text-white text-[Plus_Jakarta_Sans] font-[600] text-[16px] leading-tight hover:bg-[#3563E9]/80 transition-all cursor-pointer border-none'>
                         Rent Now
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

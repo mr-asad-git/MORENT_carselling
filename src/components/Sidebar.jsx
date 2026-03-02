@@ -54,8 +54,7 @@ const Sidebar = ({ isSidebarOpen, setIsSidebarOpen, filters, setFilters }) => {
             {/* Overlay */}
             {isSidebarOpen && (
                 <div
-                    className="fixed left-0 right-0 bottom-0 bg-black/20 z-40"
-                    style={{ top: '18vh' }}
+                    className="fixed h-full left-0 right-0 top-0 z-40"
                     onClick={() => setIsSidebarOpen(false)}
                 />
             )}

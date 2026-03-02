@@ -24,10 +24,10 @@ const Header = ({ searchTerm, setSearchTerm, wishlist, setIsSidebarOpen, showSea
                 <div className="nav-links_and_user flex justify-center items-center">
                     <div className="nav-links flex justify-center items-center">
                         <ul className='flex justify-center items-center flex-row gap-4'>
-                            <Link to="/wishlist"><div className="button w-[45px] h-[45px] border-[1px] border-gray-200 rounded-4xl bg-(--primary-color) flex justify-center items-center relative"><img src="./heart.svg" className='w-[25px] h-[25px]' alt="" />{wishlist.length > 0 && <div className="badge absolute h-[15px] w-[15px] bg-red-500 rounded-full top-0 right-0 text-white text-[10px] text-[Plus_Jakarta_Sans] font-[500] flex justify-center items-center">{wishlist.length}</div>}</div></Link>
-                            <div className="button w-[45px] h-[45px] border-[1px] border-gray-200 rounded-4xl bg-(--primary-color) flex justify-center items-center"><img src="./notification.svg" className='w-[25px] h-[25px]' alt="" /></div>
-                            <Link to="/settings"><div className="button w-[45px] h-[45px] border-[1px] border-gray-200 rounded-4xl bg-(--primary-color) flex justify-center items-center"><img src="./setting.svg" className='w-[25px] h-[25px]' alt="" /></div></Link>
-                            <div className="button w-[45px] h-[45px] border-[1px] border-gray-200 rounded-4xl bg-(--primary-color)"><img src="./Image.svg" className='w-full h-full' alt="" /></div>
+                            <Link to="/wishlist"><div className="button w-[45px] h-[45px] border-[1px] border-gray-200 rounded-4xl bg-(--primary-color) flex justify-center items-center relative"><img src="/heart.svg" className='w-[25px] h-[25px]' alt="" />{wishlist.length > 0 && <div className="badge absolute h-[15px] w-[15px] bg-red-500 rounded-full top-0 right-0 text-white text-[10px] text-[Plus_Jakarta_Sans] font-[500] flex justify-center items-center">{wishlist.length}</div>}</div></Link>
+                            <div className="button w-[45px] h-[45px] border-[1px] border-gray-200 rounded-4xl bg-(--primary-color) flex justify-center items-center"><img src="/notification.svg" className='w-[25px] h-[25px]' alt="" /></div>
+                            <Link to="/settings"><div className="button w-[45px] h-[45px] border-[1px] border-gray-200 rounded-4xl bg-(--primary-color) flex justify-center items-center"><img src="/setting.svg" className='w-[25px] h-[25px]' alt="" /></div></Link>
+                            <div className="button w-[45px] h-[45px] border-[1px] border-gray-200 rounded-4xl bg-(--primary-color)"><img src="/Image.svg" className='w-full h-full' alt="" /></div>
                         </ul>
                     </div>
                 </div>

@@ -14,8 +14,8 @@ const Locators = ({ title }) => {
                     <div className="dropdowns flex justify-between items-center w-full">
                         <div className="Locations-dropdown flex flex-col gap-[5px] flex-1">
                             <p className='text-[Plus_Jakarta_Sans] font-[700] text-[16px] leading-tight'>Locations</p>
-                            <select className='text-[#90A3BF] text-[12px] font-medium border-none outline-none bg-transparent cursor-pointer' name="" id="">
-                                <option value="" disabled selected>Select Location</option>
+                            <select defaultValue="" className='text-[#90A3BF] text-[12px] font-medium border-none outline-none bg-transparent cursor-pointer' name="" id="">
+                                <option value="" disabled>Select Location</option>
                                 <option value="London">London</option>
                                 <option value="Paris">Paris</option>
                                 <option value="New York">New York</option>
@@ -24,8 +24,8 @@ const Locators = ({ title }) => {
                         </div>
                         <div className="Date-dropdown flex flex-col gap-[5px] flex-1 px-[20px] border-l border-[#C3D4E9]/40">
                             <p className='text-[Plus_Jakarta_Sans] font-[700] text-[16px] leading-tight'>Date</p>
-                            <select className='text-[#90A3BF] text-[12px] font-medium border-none outline-none bg-transparent cursor-pointer' name="" id="">
-                                <option value="" disabled selected>Select Date</option>
+                            <select defaultValue="" className='text-[#90A3BF] text-[12px] font-medium border-none outline-none bg-transparent cursor-pointer' name="" id="">
+                                <option value="" disabled>Select Date</option>
                                 <option value="2026-03-01">2026-03-01</option>
                                 <option value="2026-03-02">2026-03-02</option>
                                 <option value="2026-03-03">2026-03-03</option>
@@ -33,8 +33,8 @@ const Locators = ({ title }) => {
                         </div>
                         <div className="Time-dropdown flex flex-col gap-[5px] flex-1 px-[20px] border-l border-[#C3D4E9]/40">
                             <p className='text-[Plus_Jakarta_Sans] font-[700] text-[16px] leading-tight'>Time</p>
-                            <select className='text-[#90A3BF] text-[12px] font-medium border-none outline-none bg-transparent cursor-pointer' name="" id="">
-                                <option value="" disabled selected>Select Time</option>
+                            <select defaultValue="" className='text-[#90A3BF] text-[12px] font-medium border-none outline-none bg-transparent cursor-pointer' name="" id="">
+                                <option value="" disabled>Select Time</option>
                                 <option value="09:00 AM">09:00 AM</option>
                                 <option value="12:00 PM">12:00 PM</option>
                                 <option value="03:00 PM">03:00 PM</option>
