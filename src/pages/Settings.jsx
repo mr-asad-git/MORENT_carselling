@@ -7,7 +7,7 @@ const Settings = ({ setShowSearch }) => {
         setShowSearch(false);
     }, [setShowSearch]);
     return (
-        <div className='h-full mx-[5rem] flex flex-col gap-[2rem]'>
+        <div className='min-h-full px-4 sm:px-8 md:px-12 lg:px-20 py-6 flex flex-col gap-[2rem] bg-[#F6F7F9]'>
             <div className="wrap flex flex-col">
                 <p className='text-[Plus_Jakarta_Sans] font-[600] text-[16px] text-[#90A3BF] leading-tight px-[10px]'><Link to="/">Home</Link> / &nbsp;<span className='text-(--global-color)'>Settings</span></p>
             </div>

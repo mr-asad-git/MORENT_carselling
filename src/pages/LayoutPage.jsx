@@ -42,14 +42,14 @@ const LayoutPage = ({ wishlist, setWishlist, searchTerm, setShowSearch, filters,
   const recommendationCars = applyFilters(cars.slice(4));
 
   return (
-    <div className='w-full flex flex-col gap-[2rem] px-[5rem] bg-[#F6F7F9] py-[3rem] min-h-[60vh]'>
+    <div className='w-full flex flex-col gap-[2rem] px-4 sm:px-8 md:px-12 lg:px-20 bg-[#F6F7F9] py-[2rem] sm:py-[3rem] min-h-[60vh]'>
 
       {/* Search Results Section */}
       <div className={`transition-all duration-500 ease-in-out overflow-hidden ${searchTerm.trim() ? "max-h-[2000px] opacity-100 mb-8" : "max-h-0 opacity-0 mb-0"}`}>
         <p className='text-[Plus_Jakarta_Sans] font-[600] text-[16px] text-[#90A3BF] leading-tight px-[10px] mb-4'>Search Results</p>
 
         {filteredCars && filteredCars.length > 0 ? (
-          <div className={`cars-grid grid gap-[32px] ${isSidebarOpen ? 'grid-cols-3' : 'grid-cols-4'}`}>
+          <div className={`cars-grid grid gap-4 sm:gap-6 lg:gap-[32px] grid-cols-1 sm:grid-cols-2 ${isSidebarOpen ? 'lg:grid-cols-2 xl:grid-cols-3' : 'lg:grid-cols-3 xl:grid-cols-4'}`}>
             {filteredCars.map((car) => (
               <CarCard key={car.id} car={car} wishlist={wishlist} setWishlist={setWishlist} />
             ))}
@@ -62,14 +62,14 @@ const LayoutPage = ({ wishlist, setWishlist, searchTerm, setShowSearch, filters,
       </div>
 
 
-      <div className="cards flex justify-between gap-10">
+      <div className="cards flex flex-col sm:flex-row justify-between gap-4 sm:gap-6 lg:gap-10">
         <HeroCard title="The Best Platform for Car Rental" text="Ease of doing a car rental safely and reliably. Of course at a low price." car="/cars/image 7.svg" bgVariant="circles" />
         <HeroCard title="Easy way to rent a car at a low price" text="Providing cheap car rental services and safe and comfortable facilities." car="/cars/car-1.svg" bgVariant="chevrons" />
       </div>
 
-      <div className="location-comp flex justify-between items-center flex-row gap-[2rem]">
+      <div className="location-comp flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 md:gap-[2rem]">
         <Locators title="Pick-up" />
-        <LocateDivider />
+        <div className="hidden md:block flex-shrink-0"><LocateDivider /></div>
         <Locators title="Drop-off" />
       </div>
 
@@ -79,7 +79,7 @@ const LayoutPage = ({ wishlist, setWishlist, searchTerm, setShowSearch, filters,
           <Link to="/cars" className='text-[Plus_Jakarta_Sans] font-[600] text-[16px] text-[#3563E9] leading-tight hover:underline hover:transition-all hover:duration-300'>View All</Link>
         </div>
         {popularCars.length > 0 ? (
-          <div className={`cars-grid grid gap-[32px] ${isSidebarOpen ? 'grid-cols-3' : 'grid-cols-4'}`}>
+          <div className={`cars-grid grid gap-4 sm:gap-6 lg:gap-[32px] grid-cols-1 sm:grid-cols-2 ${isSidebarOpen ? 'lg:grid-cols-2 xl:grid-cols-3' : 'lg:grid-cols-3 xl:grid-cols-4'}`}>
             {popularCars.map((car) => (
               <CarCard key={car.id} car={car} wishlist={wishlist} setWishlist={setWishlist} />
             ))}
@@ -94,7 +94,7 @@ const LayoutPage = ({ wishlist, setWishlist, searchTerm, setShowSearch, filters,
       <div className="section-recommendation flex flex-col gap-[20px] mt-[20px]">
         <p className='text-[Plus_Jakarta_Sans] font-[600] text-[16px] text-[#90A3BF] leading-tight px-[10px]'>Recommendation Car</p>
         {recommendationCars.length > 0 ? (
-          <div className={`cars-grid grid gap-[32px] ${isSidebarOpen ? 'grid-cols-3' : 'grid-cols-4'}`}>
+          <div className={`cars-grid grid gap-4 sm:gap-6 lg:gap-[32px] grid-cols-1 sm:grid-cols-2 ${isSidebarOpen ? 'lg:grid-cols-2 xl:grid-cols-3' : 'lg:grid-cols-3 xl:grid-cols-4'}`}>
             {recommendationCars.map((car) => (
               <CarCard key={car.id} car={car} wishlist={wishlist} setWishlist={setWishlist} />
             ))}

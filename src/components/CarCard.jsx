@@ -13,7 +13,7 @@ const CarCard = ({ car, wishlist, setWishlist }) => {
         }
     }
     return (
-        <div className="w-[304px] h-[388px] bg-white rounded-xl shadow-sm flex flex-col justify-between p-[24px] hover:shadow-xl hover:scale-105 transition-all duration-300">
+        <div className="w-full min-h-[340px] bg-white rounded-xl shadow-sm flex flex-col justify-between p-[20px] sm:p-[24px] hover:shadow-xl hover:scale-105 transition-all duration-300">
             <div className="flex justify-between items-start">
                 <div className="car-title">
                     <p className='text-[Plus_Jakarta_Sans] font-[700] text-[20px] leading-tight text-[#1A202C]'>{car.name}</p>
