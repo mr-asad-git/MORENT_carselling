@@ -161,7 +161,7 @@ const CarDisplay = ({ wishlist, setWishlist }) => {
                 <div className="section-recent flex flex-col gap-[20px]">
                     <div className="flex justify-between items-center px-[10px]">
                         <p className='text-[Plus_Jakarta_Sans] font-[600] text-[16px] text-[#90A3BF] leading-tight'>Recent Car</p>
-                        <a href="#" className='text-[Plus_Jakarta_Sans] font-[600] text-[16px] text-[#3563E9] leading-tight hover:underline hover:transition-all hover:duration-300'>View All</a>
+                        <Link to="/cars" className='text-[Plus_Jakarta_Sans] font-[600] text-[16px] text-[#3563E9] leading-tight hover:underline hover:transition-all hover:duration-300'>View All</Link>
                     </div>
                     {recentCars.length > 0 ? (
                         <div className="cars-grid grid gap-4 sm:gap-6 lg:gap-[32px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

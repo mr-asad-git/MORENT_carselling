@@ -67,7 +67,7 @@ const LayoutPage = ({ wishlist, setWishlist, searchTerm, setShowSearch, filters,
         <HeroCard title="Easy way to rent a car at a low price" text="Providing cheap car rental services and safe and comfortable facilities." car="/cars/car-1.svg" bgVariant="chevrons" />
       </div>
 
-      <div className="location-comp flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4 md:gap-[2rem]">
+      <div className="location-comp flex flex-col lg:flex-row justify-between items-stretch md:items-center gap-4 md:gap-[2rem]">
         <Locators title="Pick-up" />
         <div className="hidden md:block flex-shrink-0"><LocateDivider /></div>
         <Locators title="Drop-off" />

@@ -8,12 +8,12 @@ const Footer = () => {
 
     return (
         <div className='w-full bg-(--primary-color) px-4 sm:px-10 lg:px-20 py-10'>
-            <div className="wrapper w-full flex flex-col md:flex-row justify-between gap-8">
-                <div className="details flex flex-col gap-[1rem] max-w-[260px]">
+            <div className="wrapper w-full flex flex-col justify-center items-center md:flex md:justify-center md:flex-col lg:flex-row lg:justify-between gap-8">
+                <div className="details flex flex-col md:flex md:justify-center md:items-center gap-[1rem] max-w-[260px]">
                     <h1 className='text-[Plus_Jakarta_Sans] font-[600] text-[28px] sm:text-[33px] text-(--global-color) leading-tight'>MORENT</h1>
-                    <p className='text-[Plus_Jakarta_Sans] font-[400] text-[14px] sm:text-[15px] leading-tight'>Our vision is to provide convenience and help increase your sales business.</p>
+                    <p className='text-[Plus_Jakarta_Sans] font-[400] text-[14px] sm:text-[15px] leading-tight text-center lg:text-left'>Our vision is to provide convenience and help increase your sales business.</p>
                 </div>
-                <div className="links grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8">
+                <div className="links grid grid-cols-1 md:flex md:justify-center md:flex-col lg:flex-row lg:grid-cols-3 gap-6 sm:gap-8">
                     <div className="about">
                         <ul className='flex flex-col gap-[0.75rem]'>
                             <li className='text-[Plus_Jakarta_Sans] font-[600] text-[18px] sm:text-[20px] leading-tight'>About</li>

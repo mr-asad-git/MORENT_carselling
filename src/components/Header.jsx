@@ -21,31 +21,33 @@ const Header = ({ searchTerm, setSearchTerm, wishlist, setIsSidebarOpen, showSea
     }, []);
 
     return (
-        <div className={`Header sticky top-0 z-50 w-full flex flex-col justify-center sm:h-[18vh] h-auto min-h-[64px] px-4 sm:px-10 lg:px-20 py-2 sm:py-0 transition-all duration-300
+        <div className={`Header sticky top-0 z-50 w-full flex flex-col lg:flex-row justify-center sm:h-[18vh] h-auto min-h-[64px] px-4 sm:px-10 lg:px-20 py-2 sm:py-0 transition-all duration-300
             ${scrolled
                 ? 'bg-white/80 backdrop-blur-md shadow-md'
                 : 'bg-(--primary-color)'
             }`}>
 
             {/* Main row */}
-            <div className="wrapper w-full flex justify-between items-center gap-4">
+            <div className="wrapper w-full flex flex-col lg:flex-row justify-between items-center gap-4">
 
-                {/* Logo */}
-                <div className='Logo_Text flex-shrink-0'>
-                    <p className='text-[20px] sm:text-[33px] leading-[23px] tracking-[0.02em] text-[Plus_Jakarta_Sans] text-(--global-color) font-bold'>
-                        <Link to="/">MORENT</Link>
-                    </p>
-                </div>
-
-                {/* Desktop search */}
-                {showSearch && (
-                    <div className='hidden md:flex flex-1 justify-center sm:justify-start'>
-                        <Search searchTerm={localSearchTerm} onSearchChange={setLocalSearchTerm} setIsSidebarOpen={setIsSidebarOpen} />
+                <div className="flex flex-row items-center gap-4">
+                    {/* Logo */}
+                    <div className='Logo_Text flex-shrink-0'>
+                        <p className='text-[20px] sm:text-[33px] leading-[23px] tracking-[0.02em] text-[Plus_Jakarta_Sans] text-(--global-color) font-bold'>
+                            <Link to="/">MORENT</Link>
+                        </p>
                     </div>
-                )}
 
+                    {/* Desktop search */}
+                    {showSearch && (
+                        <div className='hidden md:flex flex-1 justify-center sm:justify-start'>
+                            <Search searchTerm={localSearchTerm} onSearchChange={setLocalSearchTerm} setIsSidebarOpen={setIsSidebarOpen} />
+                        </div>
+                    )}
+
+                </div>
                 {/* Right icons */}
-                <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+                <div className="flex w-full lg:w-auto justify-end lg:justify-between items-center gap-2 sm:gap-3 flex-shrink-0">
 
                     {/* Mobile search toggle */}
                     {showSearch && (
@@ -79,8 +81,8 @@ const Header = ({ searchTerm, setSearchTerm, wishlist, setIsSidebarOpen, showSea
                         </div>
                     </Link>
 
-                    <div className="w-[44px] h-[44px] sm:w-[45px] sm:h-[45px] border border-gray-200 rounded-full bg-(--primary-color) overflow-hidden ">
-                        <img src="/Image.png" className='w-full h-full' alt="Profile" />
+                    <div className="w-[44px] h-[44px] sm:w-[45px] sm:h-[45px] border border-gray-200 rounded-full bg-(--primary-color) overflow-hidden">
+                        <img src="/Image.png" className='w-full h-full object-cover' alt="Profile" />
                     </div>
 
                 </div>
