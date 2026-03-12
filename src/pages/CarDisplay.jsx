@@ -11,7 +11,7 @@ import CarCard from '../components/CarCard'
 import demo1 from '/cars/demo1.svg'
 import demo2 from '/cars/demo2.svg'
 
-const CarDisplay = ({ wishlist, setWishlist }) => {
+const CarDisplay = ({ wishlist, setWishlist, setShowSearch }) => {
 
     const selectedReview = reviews.slice(0, 49);
     const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
@@ -54,6 +54,11 @@ const CarDisplay = ({ wishlist, setWishlist }) => {
             </div>
         )
     }
+
+    useEffect(() => {
+        setShowSearch(false);
+    }, [setShowSearch]);
+
 
     return (
         <div className="h-full w-full bg-[#F5F5F5] py-[2rem] px-4 sm:px-8 md:px-12 lg:px-20">

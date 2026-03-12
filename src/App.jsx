@@ -99,7 +99,7 @@ const App = () => {
             path="/settings"
             element={<Settings setShowSearch={setShowSearch} />}
           />
-          <Route path="/car-display/:id" element={<CarDisplay wishlist={wishlist} setWishlist={setWishlist} />} />
+          <Route path="/car-display/:id" element={<CarDisplay wishlist={wishlist} setWishlist={setWishlist} setShowSearch={setShowSearch} />} />
           <Route path="/cars" element={<Cars wishlist={wishlist} setWishlist={setWishlist} searchTerm={searchTerm} setShowSearch={setShowSearch} filters={filters} isSidebarOpen={isSidebarOpen} />} />
           <Route path="*" element={<Error />} />
         </Routes>
