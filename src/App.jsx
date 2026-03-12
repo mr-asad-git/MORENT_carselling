@@ -11,6 +11,7 @@ import Wishlist from './pages/Wishlist';
 import Settings from './pages/Settings';
 import CarDisplay from './pages/CarDisplay';
 import Cars from './pages/Cars';
+import Error from './pages/Error';
 
 import { Routes, Route } from 'react-router-dom';
 import { Toaster } from "@/components/ui/sonner"
@@ -100,6 +101,7 @@ const App = () => {
           />
           <Route path="/car-display/:id" element={<CarDisplay wishlist={wishlist} setWishlist={setWishlist} />} />
           <Route path="/cars" element={<Cars wishlist={wishlist} setWishlist={setWishlist} searchTerm={searchTerm} setShowSearch={setShowSearch} filters={filters} isSidebarOpen={isSidebarOpen} />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
       </div>
