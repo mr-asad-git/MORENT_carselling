@@ -39,9 +39,6 @@ const CarDisplay = ({ wishlist, setWishlist, setShowSearch }) => {
         window.scrollTo(0, 0)
     }, [id])
 
-    const [rating, setRating] = useState(0);
-    const [hover, setHover] = useState(0);
-
     // Convert string id to number
     const car = cars.find((item) => item.id === Number(id))
 
